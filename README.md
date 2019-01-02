@@ -32,7 +32,8 @@ Python
 #### IDE:
 Visual Studio with openHAB Vs Code extension
 
-
+## Project Demo
+https://youtu.be/gUP8QXdc91Y
 
 ## Project Repository
 https://github.com/richardwhitney/openhab-entertainment-room
