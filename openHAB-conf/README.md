@@ -7,10 +7,10 @@ A lot of them are generated during installation.
 #### The files that I worked on are in the following folders:
 
 ##### items
--devices.items
--lights.items
--sensores.items
--time.items
+ - devices.items
+ - lights.items
+ - sensores.items
+ - time.items
 
 ##### rules
 main.rules
@@ -23,6 +23,7 @@ client_pub.py
 ##### services
 addons.cfg
  - installs the required bindings
+
 mqtt.cfg
  - Sets up the MQTT broker
  
