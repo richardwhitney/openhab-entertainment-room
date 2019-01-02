@@ -46,7 +46,7 @@ https://github.com/Ape/samsungctl
 
 https://github.com/dhleong/ps4-waker
  
-
-
 ## Project Demo
+
+## Project Repo
 https://github.com/richardwhitney/openhab-entertainment-room
