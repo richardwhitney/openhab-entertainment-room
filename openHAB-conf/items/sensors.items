@@ -1,0 +1,5 @@
+Group Sensors
+
+Number MQTT_Test "Room Temperature [%.1f]" <temperature> (Sensors){mqtt="<[mosquitto:testing/mqtt/temperature:state:default]"}
+Number MQTT_Hum "Room Humidity [%.1f]" <humidity> (Sensors){mqtt="<[mosquitto:testing/mqtt/humidity:state:default]"}
+Number MQTT_Pres "Room Pressure [%.1f]" <pressure> (Sensors){mqtt="<[mosquitto:testing/mqtt/pressure:state:default]"}

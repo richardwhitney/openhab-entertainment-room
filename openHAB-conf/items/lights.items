@@ -1,0 +1,10 @@
+Group Lights
+
+Dimmer Entertainment_Light_Temperature "Main Light Temperature" <slider> (Lights) ["Lighting"] {channel="hue:0220:001788b4b132:1:color_temperature"}
+Dimmer Entertainment_Light_Brightness "Main Light" <slider> (Lights) ["Lighitng"] {channel="hue:0220:001788b4b132:1:brightness"}
+
+
+Dimmer Entertainment_Lamp_Temperature "Lamp Temperature" <slider> (Lights) ["Lighting"] {channel = "hue:0220:001788b4b132:2:color_temperature"}
+Dimmer Entertainment_Lamp_Brightness "Lamp" <slider> (Lights) ["Lighting"]  {channel = "hue:0220:001788b4b132:2:brightness"}
+
+

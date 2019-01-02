@@ -1,0 +1,8 @@
+Group Samsung
+Group PlayStation
+
+Switch TV_Power "TV" (Samsung) ["Switchable"]
+Rollershutter TV_VolUpDown "Volume" <soundvolume> (Samsung) ["Switchable"]
+Switch TV_Mute "Mute Audio" <soundvolume_mute> (Samsung) ["Switchable"]
+
+Switch PS_Power "PS4" (PlayStation) ["Switchable"]

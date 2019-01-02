@@ -1,0 +1,16 @@
+sitemap default label="Entertainment Room" {
+    Frame {
+        Group item=Samsung label="Samsung" icon="screen"
+    }
+    Frame {
+        Group item=PlayStation label="PS4" icon="receiver"
+    }
+    Frame {
+        Group item=Lights label="Lighting" icon="lightbulb"
+    }
+    Frame {
+        Group item=Sensors label="Sensors" icon="temperature"
+    }
+    
+}
+

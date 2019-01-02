@@ -1,0 +1,55 @@
+
+rule "Samsung TV Pwr Toggle"
+when
+    Item TV_Power received command
+then
+    if(receivedCommand == OFF) executeCommandLine("/usr/local/bin/samsungctl --host 192.168.2.8 --method websocket KEY_POWER")
+end
+
+rule "Samsung TV Volume Mute"
+when
+    Item TV_Mute received command   
+then
+    if(receivedCommand == OFF) executeCommandLine("/usr/local/bin/samsungctl --host 192.168.2.8 --method websocket KEY_VOLUP")
+    if(receivedCommand == ON) executeCommandLine("/usr/local/bin/samsungctl --host 192.168.2.8 --method websocket KEY_MUTE")
+end
+
+rule "Samsung TV Volume UpDown"
+when
+    Item TV_VolUpDown received command
+then
+    if (receivedCommand.toString == "UP") {
+        executeCommandLine("/usr/local/bin/samsungctl --host 192.168.2.8 --method websocket KEY_VOLUP")
+    }
+    if (receivedCommand.toString == "DOWN") {
+        executeCommandLine("/usr/local/bin/samsungctl --host 192.168.2.8 --method websocket KEY_VOLDOWN")
+    }
+end
+
+rule "PlayStation Pwr Toggle"
+when
+    Item PS_Power received command
+then
+    if (receivedCommand == OFF) {
+        val results = executeCommandLine("sudo ps4-waker standby", 5000)
+        logInfo("PlaystaionOff", results)
+    }
+    if (receivedCommand == ON) {
+        val results = executeCommandLine("sudo ps4-waker", 5000)
+        logInfo("PlaystationOn", results)
+    }
+end
+
+rule "Sunset"
+when
+    Channel 'astro:sun:home:set#event' triggered START
+then
+    Entertainment_Light_Brightness.sendCommand(100)
+end
+
+rule "Sunrise"
+when
+    Channel 'astro:sun:home:rise#event' triggered START
+then
+    Entertainment_Light_Brightness.sendCommand(0)
+end
